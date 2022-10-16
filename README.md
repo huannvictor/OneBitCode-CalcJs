@@ -36,7 +36,7 @@ Nesse projeto o uso foi tranquilo pois reduzimos os caracteres a serem inseridos
 </div>
 
 ## Deploy GitHub Pages
-Veja a aplicação online: [Calc.js](http://www.github.com)
+Veja a aplicação online: [Calc.js](https://huannvictor.github.io/OneBitCode-CalcJs/)
 
 ## Ideias e implementações são bem-vindas!
 Clone o repo ou use-o como template
