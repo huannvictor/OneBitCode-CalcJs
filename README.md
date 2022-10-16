@@ -26,13 +26,8 @@ Nesse projeto o uso foi tranquilo pois reduzimos os caracteres a serem inseridos
 
 ## Screenshots
 <div align="center">
-
-  ### Dark Theme
   ![imagem tema dark](assets/GithubReadMe.md-darkTheme.png)
-
-  ### Light Theme
   ![imagem tema light](assets/GithubReadMe.md-lightTheme.png)
-
 </div>
 
 ## Deploy GitHub Pages
