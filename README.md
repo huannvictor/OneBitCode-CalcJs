@@ -26,7 +26,9 @@ Nesse projeto o uso foi tranquilo pois reduzimos os caracteres a serem inseridos
 
 ## Screenshots
 <div align="center">
+  
   ![imagem tema dark](assets/GithubReadMe.md-darkTheme.png)
+  
   ![imagem tema light](assets/GithubReadMe.md-lightTheme.png)
 </div>
 
