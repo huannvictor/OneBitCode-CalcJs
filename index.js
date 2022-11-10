@@ -1,10 +1,6 @@
-import {
-  input,
-  copyButton,
-  charKey,
-  allowedKeys,
-} from "./modules/declarations.js";
-
+import { themeSwitcher } from "./modules/themeSwitcher.js";
+import { handleButtonPress, handleTyping } from "./modules/handlers.js";
+import { input, copyButton, charKey } from "./modules/declarations.js";
 import {
   clear,
   restartCopyButton,
@@ -12,43 +8,22 @@ import {
   copyToClipboard,
 } from "./modules/functions.js";
 
-import { themeSwitcher } from "./modules/themeSwitcher.js";
-
 charKey.forEach((charKeyBtn) => {
-  charKeyBtn.addEventListener("click", () => {
-    const value = charKeyBtn.dataset.value;
-    input.value += value;
-
-    restartCopyButton();
-  });
+  charKeyBtn.addEventListener("click", handleButtonPress);
 });
 
-input.addEventListener("keydown", (event) => {
-  event.preventDefault();
+input.addEventListener("keydown", handleTyping);
 
-  if (allowedKeys.includes(event.key)) {
-    input.value += event.key;
-    return;
-  }
-
-  if (event.key === "Backspace") {
-    input.value = input.value.slice(0, -1);
-  }
-
-  if (event.key === "Enter") {
-    calculate();
-  }
-});
+copyButton.addEventListener("click", copyToClipboard);
 
 document
   .getElementById("clear")
   .addEventListener("click", () => (clear(), restartCopyButton()));
+
 document
   .getElementById("equal")
   .addEventListener("click", () => (calculate(), restartCopyButton()));
 
 document
   .getElementById("themeSwitcher")
-  .addEventListener("click", () => themeSwitcher());
-
-copyButton.addEventListener("click", (event) => copyToClipboard(event));
+  .addEventListener("click", themeSwitcher);
